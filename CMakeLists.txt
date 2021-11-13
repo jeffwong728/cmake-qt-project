@@ -28,7 +28,7 @@ endif()
 #	PROJECT SETTINGS
 #-------------------------------------------------------------------------------
 
-set(TARGET_NAME cmake-qt-project)
+set(TARGET_NAME laserx)
 
 # Use git branch as project name if clones from git
 find_package(Git)
@@ -76,6 +76,7 @@ list(APPEND CMAKE_PREFIX_PATH ${QTDIR})
 find_package(Qt5Core REQUIRED)
 find_package(Qt5Gui REQUIRED)
 find_package(Qt5Widgets REQUIRED)
+find_package(Qt5OpenGL REQUIRED)
 
 # Test for supported Qt version
 find_program(QMAKE_EXECUTABLE NAMES qmake HINTS ${QTDIR} ENV QTDIR PATH_SUFFIXES bin)
@@ -144,6 +145,7 @@ list(APPEND LIBRARIES
 Qt5::Core
 Qt5::Gui
 Qt5::Widgets
+Qt5::OpenGL
 Threads::Threads
 )
 
