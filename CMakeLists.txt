@@ -172,7 +172,7 @@ INSTALL(TARGETS ${TARGET_NAME} RUNTIME DESTINATION bin)
 INCLUDE(InstallRequiredSystemLibraries)
 
 # Windows specific build steps
-if(WIN32)
+if(FALSE)
 	# Run winddeployqt if it can be found
 	find_program(WINDEPLOYQT_EXECUTABLE NAMES windeployqt HINTS ${QTDIR} ENV QTDIR PATH_SUFFIXES bin)
 	add_custom_command(TARGET ${TARGET_NAME} POST_BUILD
